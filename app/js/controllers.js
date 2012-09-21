@@ -3,10 +3,9 @@
 /* Controllers */
 
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+function InboxCtrl($scope) {
 
+    $scope.username = "Phil";
 
-function MyCtrl2() {
 }
-MyCtrl2.$inject = [];
+InboxCtrl.$inject = ["$scope"];
