@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row-fluid from">
+        <div class="span6">From: {{message.from}}</div>
+    </div>
+    <div class="row-fluid subject">
+        <div class="span6">Subject: {{message.subject}}</div>
+    </div>
+    <div class="row-fluid date ">
+        <div class="span6">Date: {{message.date | date:'MMM d, y h:mm:ss a'}}</div>
+    </div>
+    <div class="row-fluid messageBody">
+        <b>Message</b>
+        <p>{{message.body}}</p>
+    </div>
+    <div class="row-fluid back">
+        <a href="#/inbox">Back To Inbox</a>
+    </div>
+</div>

@@ -1,34 +1,13 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="brownbag">
     <head>
         <meta charset="utf-8">
         <title>Angular JS Brownbag</title>
         <link rel="stylesheet" href="css/app.css"/>
         <link rel="stylesheet" href="css/bootstrap.css"/>
     </head>
-    <body ng-controller="InboxCtrl">
-        <h2>{{username}}'s Inbox</h2>
-
-        <div class="inbox container-fluid">
-            <div class="row-fluid">
-                <div class="span6">
-                    <input type="text" class="input-medium search-query" placeholder="Filter" id="query" ng-model="query" >
-                    <label for="sortBy">Sort By: </label><select id="sortBy" ng-model="sortBy" ng-options="field for field in sortFields"></select>
-                </div>
-            </div>
-            <div class="header row-fluid">
-                <div class="span1"></div>
-                <div class="span4 from"><a ng-click="doSortBy('from')">From</a></div>
-                <div class="span5 subject"><a ng-click="doSortBy('subject')">Subject</a></div>
-                <div class="span2 date"><a ng-click="doSortBy('date')">Date</a></div>
-            </div>
-            <div class="row-fluid message {{message.status}}" ng-repeat="message in messages | filter:query | orderBy:sortBy">
-                <div class="span1"><input type="checkbox" /></div>
-                <div class="span4">{{message.from}}</div>
-                <div ng-click="openMessage(message)" class="span4">{{message.subject}}</div>
-                <div class="span2">{{message.date | date:'MMM d, y h:mm:ss a'}}</div>
-            </div>
-        </div>
+    <body >
+        <div ng-view></div>
 
         <!-- In production use:
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>

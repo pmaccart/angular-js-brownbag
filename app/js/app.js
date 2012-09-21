@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('brownbag', []).config(
-    ['$routProvider', function ($routeProvider) {
-        $routeProvier.when('/messages', {templateUrl: 'partials/messages.html', controller: InboxCtrl})
-            .when('/messages/:messageId', {templateUrl: 'partials/message.html', controller: MessageCtrl})
-            .otherwise({redirectTo: '/messages'});
+    ['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/inbox', {templateUrl: 'partials/inbox.html', controller: InboxCtrl})
+            .when('/inbox/:messageId', {templateUrl: 'partials/message.html', controller: MessageCtrl})
+            .otherwise({redirectTo: '/inbox'});
 
     }]);

@@ -1,0 +1,9 @@
+{
+    "id":2,
+    "checked":false,
+    "status":"unread",
+    "from":"Studio Mail Server",
+    "subject":"Commit Build Failed",
+    "date":"Sep 15, 2012 09:28:22 GMT",
+    "body":"The build failed!"
+}
