@@ -8,8 +8,22 @@ describe('Angular JS Brownbag App', function () {
         browser().navigateTo('../../app/index.html');
     });
 
-    it('should do something...', function () {
-
+    it('should display an inbox with 7 messages', function () {
+        expect(repeater('div.inbox .message').count()).toBe(7);
     });
 
+    it('should filter the messages by the query input', function () {
+
+        input('query').enter('studio');
+
+        pause();
+
+        expect(repeater('div.inbox .message').count()).toBe(4);
+        expect(repeater('div.inbox .message').column('message.from')).toEqual([
+            'Studio Mail Server',
+            'Studio Mail Server',
+            'Studio Mail Server',
+            'Studio Mail Server'
+        ]);
+    });
 });
