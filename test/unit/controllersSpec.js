@@ -28,7 +28,7 @@ describe('InboxCtrl', function () {
     it('should fetch messages from data/messages.json', function () {
         expect(scope.messages).toBeUndefined();
         $httpBackend.flush();
-        expect(scope.message).toEqual(messages);
+        expect(scope.messages).toEqual(messages);
     })
 });
 
