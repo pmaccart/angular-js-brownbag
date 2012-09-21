@@ -16,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr class="message {{message.status}}" ng-repeat="message in messages | filter:query | orderBy:sortBy">
+        <tr class="message {{message.status}}" id="message-{{message.id}}" ng-repeat="message in messages | filter:query | orderBy:sortBy">
             <td class="span1"><input type="checkbox" /></td>
             <td class="span4">{{message.from}}</td>
             <td class="span4"><a ng-click="openMessage(message)" href="#/inbox/{{message.id}}">{{message.subject}}</a></td>
