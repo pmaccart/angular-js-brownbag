@@ -9,12 +9,23 @@
     <body ng-controller="InboxCtrl">
         <h2>{{username}}'s Inbox</h2>
 
-        <div class="container-fluid">
+        <div class="inbox container-fluid">
             <div class="row-fluid">
+                <div class="span6">
+                    <label for="query">Search: </label><input id="query" ng-model="query" >
+                </div>
+            </div>
+            <div class="header row-fluid">
                 <div class="span1"></div>
                 <div class="span4">From</div>
                 <div class="span5">Subject</div>
                 <div class="span2">Date</div>
+            </div>
+            <div class="row-fluid message {{message.status}}" ng-repeat="message in messages | filter:query">
+                <div class="span1"><input type="checkbox" /></div>
+                <div class="span4">{{message.from}}</div>
+                <div class="span4">{{message.subject}}</div>
+                <div class="span2">{{message.date | date:'MMM d, y h:mm:ss a'}}</div>
             </div>
         </div>
 
