@@ -21,6 +21,14 @@ function InboxCtrl($scope) {
     ];
 
     $scope.sortBy = "date";
+    $scope.doSortBy = function(sortBy) {
+        $scope.sortBy = sortBy;
+        return false;
+    };
+
+    $scope.openMessage = function(message) {
+        message.status = "read";
+    };
 
 }
 InboxCtrl.$inject = ["$scope"];
