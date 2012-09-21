@@ -8,10 +8,10 @@ describe('InboxCtrl', function () {
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
         $httpBackend = _$httpBackend_;
         messages = [
-            {id: 3, from: "Sender 3", subject: "Subject 3", date: "2000-01-03"},
-            {id: 2, from: "Sender 2", subject: "Subject 2", date: "2000-01-02"},
-            {id: 4, from: "Sender 4", subject: "Subject 4", date: "2000-01-04"},
-            {id: 1, from: "Sender 1", subject: "Subject 1", date: "2000-01-01"}
+            {id: 3, from: "Sender 3", subject: "Subject 3", date: "Jan 3, 2012"},
+            {id: 2, from: "Sender 2", subject: "Subject 2", date: "Jan 2, 2012"},
+            {id: 4, from: "Sender 4", subject: "Subject 4", date: "Jan 4, 2012"},
+            {id: 1, from: "Sender 1", subject: "Subject 1", date: "Jan 1, 2012"}
         ];
 
         $httpBackend.expectGET('data/messages.json').respond(messages);
@@ -28,7 +28,7 @@ describe('InboxCtrl', function () {
     it('should fetch messages from data/messages.json', function () {
         expect(scope.messages).toBeUndefined();
         $httpBackend.flush();
-        expect(scope.message).toEqual(messages);
+        expect(scope.messages).toEqual(messages);
     })
 });
 

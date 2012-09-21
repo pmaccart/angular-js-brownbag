@@ -25,4 +25,8 @@ function InboxCtrl($scope, $http) {
         });
 
 }
-InboxCtrl.$inject = ["$scope", "$http"];
+InboxCtrl.$inject = ["$scope", "$http"]
+
+function MessageCtrl = ($scope, $routeParams, Message) {
+
+}
