@@ -9,14 +9,14 @@ describe('Angular JS Brownbag App', function () {
     });
 
     it('should display an inbox with 7 messages', function () {
-        expect(repeater('div.inbox .message').count()).toBe(7);
+        expect(repeater('.inbox .message').count()).toBe(7);
     });
 
     it('should filter the messages by the query input', function () {
 
         input('query').enter('studio');
-        expect(repeater('div.inbox .message').count()).toBe(4);
-        expect(repeater('div.inbox .message').column('message.from')).toEqual([
+        expect(repeater('.inbox .message').count()).toBe(4);
+        expect(repeater('.inbox .message').column('message.from')).toEqual([
             'Studio Mail Server',
             'Studio Mail Server',
             'Studio Mail Server',
@@ -25,9 +25,9 @@ describe('Angular JS Brownbag App', function () {
     });
 
     it('should sort the messages by the selected sort field', function () {
-        element('div.from a').click();
+        element('.from a').click();
         pause();
-        expect(repeater('div.inbox .message').column('message.from')).toEqual([
+        expect(repeater('.inbox .message').column('message.from')).toEqual([
             'Anthony Lee',
             'Liz Tobin',
             'Studio Mail Server',
