@@ -10,6 +10,14 @@ function InboxCtrl($scope, $http) {
         "status", "from", "subject", "date"
     ];
     $scope.sortBy = "date";
+    $scope.doSortBy = function(sortBy) {
+        $scope.sortBy = sortBy;
+        return false;
+    };
+
+    $scope.openMessage = function(message) {
+        message.status = "read";
+    };
 
     $http({
         method:'GET',

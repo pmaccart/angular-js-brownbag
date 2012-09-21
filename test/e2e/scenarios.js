@@ -25,7 +25,7 @@ describe('Angular JS Brownbag App', function () {
     });
 
     it('should sort the messages by the selected sort field', function () {
-        select('sortBy').option('from');
+        element('div.from a').click();
         pause();
         expect(repeater('div.inbox .message').column('message.from')).toEqual([
             'Anthony Lee',
