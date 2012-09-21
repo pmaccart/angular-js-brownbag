@@ -1,0 +1,66 @@
+[
+    {
+        "id":1,
+        "checked":false,
+        "status":"unread",
+        "from":"Studio Mail Server",
+        "subject":"Commit Build Failed",
+        "date":"Sep 15, 2012 09:12:14 GMT",
+        "body":"The build failed!"
+    },
+    {
+        "id":2,
+        "checked":false,
+        "status":"unread",
+        "from":"Studio Mail Server",
+        "subject":"Commit Build Failed",
+        "date":"Sep 15, 2012 09:28:22 GMT",
+        "body":"The build failed!"
+    },
+    {
+        "id":3,
+        "checked":false,
+        "status":"unread",
+        "from":"Studio Mail Server",
+        "subject":"Commit Build Failed",
+        "date":"Sep 15, 2012 10:5:40 GMT",
+        "body":"The build failed!"
+    },
+    {
+        "id":4,
+        "checked":false,
+        "status":"unread",
+        "from":"Studio Mail Server",
+        "subject":"Commit Build Failed",
+        "date":"Sep 15, 2012 9:53:40 GMT",
+        "body":"The build failed!"
+    },
+
+    {
+        "id":5,
+        "checked":false,
+        "status":"unread",
+        "from":"Liz Tobin",
+        "subject":"Enter Your Time",
+        "date":"Sep 15, 2012 11:34:19 GMT",
+        "body":"Don't forget to enter time both MSP and CP!"
+    },
+    {
+        "id":6,
+        "checked":false,
+        "status":"unread",
+        "from":"Anthony Lee",
+        "subject":"Enter JIRA Hours",
+        "date":"Sep 15, 2012 7:45:00 GMT",
+        "body":""
+    },
+    {
+        "id":7,
+        "checked":false,
+        "status":"unread",
+        "from":"Tom Snapp",
+        "subject":"Feeding the Bulldog",
+        "date":"Sep 15, 2012 12:32:45 GMT",
+        "body":"85%!"
+    }
+]
