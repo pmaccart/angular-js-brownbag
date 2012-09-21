@@ -13,6 +13,7 @@
             <div class="row-fluid">
                 <div class="span6">
                     <label for="query">Search: </label><input id="query" ng-model="query" >
+                    <label for="sortBy">Sort By: </label><select id="sortBy" ng-model="sortBy" ng-options="field for field in sortFields"></select>
                 </div>
             </div>
             <div class="header row-fluid">
@@ -21,7 +22,7 @@
                 <div class="span5">Subject</div>
                 <div class="span2">Date</div>
             </div>
-            <div class="row-fluid message {{message.status}}" ng-repeat="message in messages | filter:query">
+            <div class="row-fluid message {{message.status}}" ng-repeat="message in messages | filter:query | orderBy:sortBy">
                 <div class="span1"><input type="checkbox" /></div>
                 <div class="span4">{{message.from}}</div>
                 <div class="span4">{{message.subject}}</div>

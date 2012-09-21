@@ -15,9 +15,6 @@ describe('Angular JS Brownbag App', function () {
     it('should filter the messages by the query input', function () {
 
         input('query').enter('studio');
-
-        pause();
-
         expect(repeater('div.inbox .message').count()).toBe(4);
         expect(repeater('div.inbox .message').column('message.from')).toEqual([
             'Studio Mail Server',
@@ -25,5 +22,20 @@ describe('Angular JS Brownbag App', function () {
             'Studio Mail Server',
             'Studio Mail Server'
         ]);
+    });
+
+    it('should sort the messages by the selected sort field', function () {
+        select('sortBy').option('from');
+        pause();
+        expect(repeater('div.inbox .message').column('message.from')).toEqual([
+            'Anthony Lee',
+            'Liz Tobin',
+            'Studio Mail Server',
+            'Studio Mail Server',
+            'Studio Mail Server',
+            'Studio Mail Server',
+            'Tom Snapp'
+        ]);
+
     });
 });

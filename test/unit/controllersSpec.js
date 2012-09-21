@@ -9,6 +9,7 @@ describe('InboxCtrl', function () {
 
         expect(scope.username).toBe('Phil');
         expect(scope.messages.length).toBe(7);
+        expect(scope.sortBy).toBe('date');
     });
 });
 
